@@ -1,7 +1,5 @@
 {
   "name": "TechTrainingProject",
-  "integrations": {
-    "capacitor": {}
-  },
+  "integrations": {},
   "type": "angular"
 }

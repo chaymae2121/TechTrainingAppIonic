@@ -1,0 +1,26 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="text-center mx-4">
+  
+<h4 class="text-danger mt-5"><strong>TechTraining</strong></h4>
+    <div class="mx-4 my-4">
+    <ion-item class="mb-2">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item class="mb-4">
+    <ion-label position="floating">Mot de passe</ion-label>
+    <ion-input type="password"  [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+  <ion-button  (click)="login()" color="success" expand ="block">Se connecter</ion-button>
+  <ion-button (click)=" toRegisterPage()" color="danger" expand="block">S'inscrire</ion-button>
+
+ </div> 
+
+
+</ion-content>

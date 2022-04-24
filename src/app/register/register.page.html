@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="mx-5 my-5">
+  <div class="mx-5 my-5">
+    <div class="row my-1">
+      <ion-item class="col-md-6">
+        <ion-label position="floating">Nom :</ion-label>
+        <ion-input type="text" [(ngModel)]="firstName"></ion-input>
+      </ion-item>
+      <ion-item class="col-md-6">
+        <ion-label position="floating">Prenom :</ion-label>
+        <ion-input type="prenom" [(ngModel)]="lastName"></ion-input>
+      </ion-item>
+    </div>
+    <ion-item class="my-1">
+      <ion-label position="floating">Email :</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item class="my-1">
+      <ion-label position="floating">Mot de passe :</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item class="my-1">
+      <ion-label position="floating">Confirmation du mot de passe :</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmPassword"></ion-input>
+    </ion-item>
+    <div>
+      <ion-button (click)="signUp()" color="danger" expand="block">S'inscrire</ion-button>
+      <ion-button (click)="dejaInscris()" color="primary" expand="block">Déjà inscrit</ion-button>
+    </div>
+  </div>
+</ion-content>

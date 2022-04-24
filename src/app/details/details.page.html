@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="row">
+      <div class="col-md-6">
+        <ion-title></ion-title>
+      </div>
+      <div class="col-md-6 d-flex justify-content-end my-3">
+        <button class="btn btn-danger btn-sm mx-5" (click)="deconnecter()">Se Deconnecter</button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="text-center">
+  <ion-text color="dark">
+    <h2><strong>Formation {{name}} </strong></h2>
+  </ion-text>
+  <img src={{image}} width="200px" />
+  <div class="mx-3 px-3">
+    <ion-text color="dark">
+      <div class="ion-text-left"><strong>Date :</strong> {{date}} </div>
+    </ion-text>
+    <ion-text color="dark">
+      <div class="ion-text-left"><strong>Prérequis :</strong> {{prerequis}}</div>
+    </ion-text>
+    <ion-text color="dark">
+      <div class="ion-text-left"><strong>Description :</strong> {{description}} </div>
+    </ion-text>
+    <ion-text color="dark">
+      <div class="ion-text-left"><strong>Prix :</strong> {{prix}} </div>
+    </ion-text>
+  </div>
+  <div class="text-center"><button (click)="goBack()" class="btn btn-success btn-block mx-3 mb-2">Réserver</button>
+  </div>
+
+
+</ion-content>

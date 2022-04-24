@@ -1,20 +1,60 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <div class="row">
+      <div class="col-md-6">
+        <ion-title class="ion-text-left">Home</ion-title>
+      </div>
+      <div class="col-md-6 d-flex justify-content-end my-3">
+        <button class="btn btn-danger btn-sm mx-5" (click)="deconnecter()">Se Deconnecter</button>
+      </div>
+    </div>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="text-center">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-text color="dark">
+    <h1><strong>Bienvenue {{name}} </strong></h1>
+  </ion-text>
+
+  <ion-text color="primary">
+    <h5><strong>Listes des formations : </strong></h5>
+    <div class="mx-4 px-4">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let course of courses">
+          <ion-card class="container">
+            <ion-card-header>
+              <img src={{image}} />
+            </ion-card-header>
+            <ion-card-subtitle>Formation : </ion-card-subtitle>
+            <ion-card-title>{{course}}</ion-card-title>
+            <div class="text-center"><button (click)="addCourse(course)"
+                class="btn btn-success btn-block mx-3 mb-2">Réserver</button></div>
+            <div class="text-center"><button (click)="consulter(course)"
+                class="btn btn-danger btn-block mx-3 mb-2">Détails</button></div>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+  </ion-text>
+
+
+  <ion-text color="primary">
+    <h5><strong>Mes Formations : </strong></h5>
+    <div class="mx-4 px-4">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let course of myCourses">
+          <ion-card class="container">
+            <ion-card-header>
+              <ion-card-subtitle>Formation : </ion-card-subtitle>
+              <ion-card-title>{{course}}</ion-card-title>
+            </ion-card-header>
+            <button (click)="consulter(course)" class="btn btn-danger mx-auto my-2">Détails</button>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+
+  </ion-text>
 </ion-content>
